@@ -55,6 +55,8 @@ parcels.mapc <- townsj %>%
   left_join(parcels.mapc, ., by = c("muni" = "TOWN"))
 
 
+# Landsat images are Landsat 8 OLI/TIRS for August 2018 Tier 1 surface reflectance.
+# Downloaded from https://earthexplorer.usgs.gov/
 # Create a list of directories with landsat imagery
 dirs <- list.dirs("shapefiles/NDVI")
 dirs <- dirs[ grepl("LC", dirs) ]
